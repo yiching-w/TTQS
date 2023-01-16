@@ -1,0 +1,251 @@
+.container {
+  flex-direction: column;
+}
+
+.container.bannerArea {
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+  margin: auto;
+  border-bottom: 1px solid #ededed;
+}
+
+.carousel.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+a.carousel__link:focus-within {
+  outline: none !important;
+}
+
+a.carousel__link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slick-dots {
+  bottom: 0;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #2c808d;
+}
+
+.carousel2 {
+  border: 1px solid #ededed;
+  border-top: none;
+  border-bottom: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel2 .item {
+  border-right: 1px solid #ededed;
+}
+
+.carousel2 .item:hover {
+  border: 1px solid #73dcfc;
+  background-color: #f2f2f2;
+}
+
+.carousel2 .slick-next:before,
+.carousel2 .slick-prev:before {
+  font-family: slick;
+  font-size: 30px;
+  line-height: 1;
+  opacity: 1;
+  color: #38b4c4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel2 .slick-next,
+.carousel2 .slick-prev {
+  width: 40px;
+  height: 40px;
+}
+
+.carousel2 .slick-prev {
+  left: -37px;
+}
+
+.carousel2 .slick-next {
+  right: -37px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.lastestNewWrap {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.lastestNewWrap .head {
+  padding-top: 14px;
+  background-color: #f2f2f2;
+}
+
+.lastestNewWrap .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 170px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+.lastestNewWrap .body .news {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  transition: 0.3s all;
+}
+
+.lastestNewWrap .body .news:hover {
+  background-color: #eee;
+  color: #2c808d;
+}
+
+.lastestNewWrap .body .news i {
+  color: var(--secondary);
+}
+
+.lastestNewWrap .body .news .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.more {
+  background: var(--secondary);
+  padding: 10px;
+  text-align: center;
+  transition: 0.2s all;
+  display: block;
+}
+
+.more:hover {
+  background: #e5204e;
+}
+
+.carousel3 {
+  background-color: var(--primary);
+  padding: 20px 50px;
+  margin-top: 20px;
+}
+
+.carousel3 .slick-slide img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+.carousel3 .slick-next:before {
+  content: "";
+  background-image: url(../image/right-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -5px;
+}
+
+.carousel3 .slick-prev:before {
+  content: "";
+  background-image: url(../image/left-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5px;
+}
+
+.carousel3 .slick-prev,
+.carousel3 .slick-next {
+  width: 30px;
+  height: 50%;
+}
+
+.carousel3 .slick-prev {
+  left: 5px;
+}
+
+.carousel3 .slick-next {
+  right: 5px;
+}
+
+button.slick-next:hover,
+button.slick-prev:hover {
+  transform: translate(0, -50%) scale(1);
+}
+
+button.slick-next.slick-arrow:focus,
+button.slick-prev.slick-arrow:focus {
+  outline: 2px solid var(--dark) !important;
+  border-radius: 2px;
+}
+
+.slick-dots button:focus {
+  outline: 2px solid var(--dark) !important;
+  border-radius: 2px;
+}
+
+.carousel3 .slick-slide a {
+  display: block;
+  width: calc(100% - 20px);
+}
+
+@media (max-width: 768.98px) {
+  .container.bannerArea {
+    padding: 58px 0 0;
+  }
+
+  .carousel2 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 576.98px) {
+  .container.mainArea {
+    padding-top: 10px;
+  }
+
+  .carousel2 .item img {
+    width: 60px;
+  }
+
+  .carousel3 {
+    padding: 15px 35px;
+  }
+
+  .carousel3 .slick-slide img {
+    height: 45px;
+    margin-right: 12px;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    font-size: 20px;
+  }
+}

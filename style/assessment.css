@@ -1,0 +1,67 @@
+.qualified th {
+    width: 11%;
+}
+
+.question span {
+    margin: 0 2px;
+    color: var(--red);
+}
+
+table.resultList {
+    width: 100%;
+}
+
+table.resultList a {
+    text-decoration: underline;
+}
+
+table.resultList a:hover {
+    color: var(--primary-darker);
+}
+
+table.resultList thead tr {
+    height: 30px;
+    background-color: var(--primary-lighter);
+}
+
+table.resultList tbody td {
+    padding: 5px;
+    text-align: center;
+}
+
+table.resultList tbody td:first-child {
+    text-align: left;
+}
+
+table.resultList tbody tr.info td {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+table.resultList tbody tr:nth-of-type(2n) {
+    background-color: var(--light-gray);
+}
+
+
+table.resultList tbody tr:nth-of-type(2n) {
+    background-color: var(--light-gray);
+}
+
+@media (max-width: 576px) {
+    table.result tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
+
+.keyword,
+.count {
+    margin: 0 5px;
+    font-weight: 500;
+    color: var(--red);
+}
+
+.card p {
+    margin: 8px 0;
+}
