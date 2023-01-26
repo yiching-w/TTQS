@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
+      name="viewport"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/table.css" />
+    <title>TTQS 課程資訊</title>
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+    <div class="container">
+      <div class="mainContent">
+        <div class="topContent">
+          <div class="breadcrumb">
+            <a
+              accesskey="C"
+              id="content"
+              href="#"
+              title="主要內容區，此區塊呈現各網頁的網頁內容。"
+              >:::</a
+            >
+            <span><a href="index.php">首頁</a></span>
+            <span><a href="menu_004.php">教育訓練</a></span>
+            <span><a href="#">課程資訊</a></span>
+          </div>
+          <div class="linkArea">
+            <a href="news.php" title="最新消息">
+              <img src="image/latest.png" alt="最新消息" />
+              <div>最新消息</div>
+            </a>
+            <a href="menu_0011.php" title="會員專區">
+              <img src="image/menuIcon1.png" alt="會員專區" />
+              <div>會員專區</div>
+            </a>
+            <a href="topmenu_002.php" title="聯絡我們">
+              <img src="image/menuIcon2.png" alt="聯絡我們" />
+              <div>聯絡我們</div>
+            </a>
+            <a href="topmenu_003_2016.php" title="問卷調查">
+              <img src="image/b4-1.png" alt="問卷調查" />
+              <div>問卷調查</div>
+            </a>
+            <a href="menu_008.php" title="知識充電">
+              <img src="image/menuIcon3.png" alt="知識充電" />
+              <div>知識充電</div>
+            </a>
+            <a href="menu_010_new.php" title="資料下載">
+              <img src="image/menuIcon4.png" alt="資料下載" />
+              <div>資料下載</div>
+            </a>
+            <a href="menu_005_01.php" title="活動專區">
+              <img src="image/event.png" alt="活動專區" />
+              <div>活動專區</div>
+            </a>
+            <a href="menu_004_03.php" title="課程資訊">
+              <img src="image/lesson.png" alt="課程資訊" />
+              <div>課程資訊</div>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="cardTitle">課程資訊查詢</h3>
+          <table class="searchTable">
+            <tbody>
+              <tr>
+                <td>日期-起</td>
+                <td>
+                  <select name="from_year" id="from_year">
+                    <option label="2023" value="2023">2023</option>
+                    <option label="2024" value="2024">2024</option>
+                  </select>
+                  <span>年</span>
+                  <select name="from_month" id="from_month">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>月</span>
+                  <select name="from_day" id="from_day">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>日</span>
+                </td>
+              </tr>
+              <tr>
+                <td>日期-訖</td>
+                <td>
+                  <select name="from_year" id="from_year">
+                    <option label="2023" value="2023">2023</option>
+                    <option label="2024" value="2024">2024</option>
+                  </select>
+                  <span>年</span>
+                  <select name="from_month" id="from_month">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>月</span>
+                  <select name="from_day" id="from_day">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>日</span>
+                </td>
+              </tr>
+              <tr>
+                <td>課程名稱</td>
+                <td>
+                  <select class="normalSelect" name="" id="">
+                    <option label="" value="">-- 所有課程 --</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>請選擇區別</td>
+                <td>
+                  <select class="normalSelect" name="" id="">
+                    <option label="" value="">-- 全部區別 --</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>報名狀態</td>
+                <td>
+                  <select class="normalSelect" name="" id="">
+                    <option label="" value="">-- 全部 --</option>
+                    <option label="" value="">報名中</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="searchBtn">
+            <button class="normalButton" type="button">資料查詢</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="cardTitle">課程資訊列表</h3>
+          <table class="resultList">
+            <thead>
+              <tr>
+                <th>區別</th>
+                <th>課程類別</th>
+                <th>課程名稱</th>
+                <th>課程日期</th>
+                <th>課程時間</th>
+                <th>
+                  <div>課程人數</div>
+                  <div>上限</div>
+                </th>
+                <th>截止日期</th>
+                <th>報名</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>桃竹苗區</td>
+                <td>實務課程</td>
+                <td>
+                  <a href="">TTQS訓練機構版個案解析與實作研習</a>
+                </td>
+                <td>
+                  <div>
+                    <div>02/01</div>
+                    <div>02/04</div>
+                    <div>02/10</div>
+                    <div>02/18</div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div>09:00</div>
+                    <div>16:00</div>
+                  </div>
+                </td>
+                <td>50</td>
+                <td>01/29</td>
+                <td>
+                  <div>
+                    <div class="remind">已額滿</div>
+                    <div>
+                      <button class="normalButton" type="button">報名</button>
+                    </div>
+                  </div>
+                </td>
+                <td>(實務課程-可候補)</td>
+              </tr>
+              <tr>
+                <td>桃竹苗區</td>
+                <td>實務課程</td>
+                <td>
+                  <a href="">TTQS訓練機構版個案解析與實作研習</a>
+                </td>
+                <td>
+                  <div>
+                    <div>02/01</div>
+                    <div>02/04</div>
+                    <div>02/10</div>
+                    <div>02/18</div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div>09:00</div>
+                    <div>16:00</div>
+                  </div>
+                </td>
+                <td>50</td>
+                <td>01/29</td>
+                <td>
+                  <div>
+                    <div class="remind">已額滿</div>
+                    <div>
+                      <button class="normalButton" type="button">報名</button>
+                    </div>
+                  </div>
+                </td>
+                <td>(實務課程-可候補)</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pageWrap">
+            <div class="pageBtns">
+              <button class="normalButton" type="button">首頁</button>
+              <button class="normalButton" type="button">前頁</button>
+              <button class="normalButton" type="button">次頁</button>
+              <button class="normalButton" type="button">末頁</button>
+            </div>
+            <div class="pagination">
+              <div>每頁：30 筆</div>
+              <div>總筆數：11 筆，第：</div>
+              <div>
+                <select
+                  class="myselect"
+                  id="PageSelect"
+                  title="當前頁碼/總頁數"
+                >
+                  <option value="0" selected="">1 / 1</option>
+                </select>
+              </div>
+              <div>頁 ，總頁數：1 頁</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="script/jquery-3.3.0.min.js"></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
