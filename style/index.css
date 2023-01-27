@@ -160,6 +160,10 @@ button.slick-prev.slick-arrow:focus {
   width: calc(100% - 20px);
 }
 
+.carousel2 .item img {
+  width: 80px;
+}
+
 @media (max-width: 768.98px) {
   .container.bannerArea {
     padding: 58px 0 0;
