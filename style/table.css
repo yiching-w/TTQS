@@ -1,8 +1,13 @@
+body {
+  background-color: #e5fff6;
+}
+
 .mainContent {
   background-color: #eff3fb;
 }
 
-table.searchTable {
+table.searchTable,
+table.resultList {
   border-collapse: collapse;
 }
 
@@ -10,21 +15,37 @@ table.searchTable tr {
   height: 45px;
 }
 
-table.searchTable tr td:first-child {
+table.searchTable tr td:first-child,
+table.searchTable tr td.head {
   background-color: #c6d8ec;
   min-width: 180px;
   text-align: center;
-  border-bottom: 1px solid #c6d8ec;
+  border-bottom: 1px solid #999999;
+  border-right: 1px solid #999999;
 }
 
 table.searchTable tr td:last-child {
   padding: 15px;
-  border: 1px solid #c6d8ec;
   width: 100%;
 }
 
-table.searchTable tr:not(:last-child) td:first-child {
-  border-bottom: 1px solid #fff;
+table.resultList tr th,
+table.resultList tr td {
+  font-weight: normal;
+  font-size: 0.938rem;
+}
+
+table.resultList tr th {
+  border-bottom: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+table.resultList tr td {
+  transition: 0.2s all;
+}
+
+table.resultList tr:hover td {
+  background-color: #ffffcc;
 }
 
 select {
@@ -47,15 +68,25 @@ table.searchTable select.normalSelect {
   color: red;
 }
 
+.card.search {
+  position: relative;
+  margin: 0;
+}
+
 .searchBtn {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
   text-align: center;
+}
+
+.searchBtn button {
+  min-height: 35px;
 }
 
 .normalButton {
   display: inline-block;
-  padding: 8px;
-  min-width: 50px;
+  padding: 6px 20px;
   border: 0;
   line-height: 1;
   vertical-align: middle;
@@ -65,6 +96,26 @@ table.searchTable select.normalSelect {
   background-color: #c24c8d;
   transition: 300ms;
   border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+  .searchBtn {
+    position: relative;
+    inset: 0;
+    margin: 20px 20px -10px;
+    text-align: right;
+  }
+
+  .searchBtn button {
+    min-height: 0;
+  }
+}
+
+.normalButton:disabled,
+.normalButton[disabled] {
+  background-color: #999999;
+  color: #ffffff;
+  cursor: not-allowed;
 }
 
 .pageWrap {
@@ -91,20 +142,19 @@ table.resultList thead tr {
   font-weight: normal;
 }
 
+table.resultList tr th {
+  padding: 5px;
+  height: 40px;
+}
+
 table.resultList tr th,
 table.resultList tr td {
   max-width: 150px;
-  padding: 10px;
 }
-
-table.resultList tr td {
-  border-bottom: 1px #cccccc dashed;
-}
-
 table.resultList tbody tr {
   height: 50px;
   text-align: center;
-  border-bottom: 1px #cccccc dashed;
+  border-bottom: 1px dashed #999999;
 }
 
 .fa-file-download {
@@ -113,13 +163,23 @@ table.resultList tbody tr {
 }
 
 @media (max-width: 768px) {
-  .card {
-    padding: 0;
+  .container {
+    padding: 57px 0 0;
   }
-  table.searchTable tr:not(:last-child) td:first-child {
+
+  .topContent {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .card {
+    padding: 20px 0 30px;
+  }
+  table.searchTable tr:not(:last-child) td:first-child,
+  table.searchTable tr:not(:last-child) td.head {
     font-size: 0.9rem;
   }
-  table.searchTable tr td:first-child {
+  table.searchTable tr td:first-child,
+  table.searchTable tr td.head {
     min-width: 95px;
   }
   table.searchTable tr td:last-child {
@@ -136,14 +196,15 @@ table.resultList tbody tr {
   table.resultList tr td {
     max-width: 100%;
     width: 100%;
-    padding: 5px;
     display: flex;
     position: relative;
     align-items: center;
-    padding-left: 130px;
+    justify-content: center;
+    padding-left: 115px;
   }
 
-  table.resultList tr td:first-child {
+  table.resultList tr td:first-child,
+  table.resultList tr td.head {
     border-top: 1px solid #ccc;
   }
 
@@ -159,6 +220,7 @@ table.resultList tbody tr {
     align-items: flex-start;
     height: auto;
     margin-bottom: 40px;
+    border-bottom: 0;
   }
   table.resultList td::before {
     color: var(--darker);
@@ -173,6 +235,8 @@ table.resultList tbody tr {
     top: 0;
     bottom: 0;
     left: 0;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
   }
   table.resultList td:nth-of-type(1):before {
     content: "區別";
@@ -200,6 +264,12 @@ table.resultList tbody tr {
   }
   table.resultList td:nth-of-type(9):before {
     content: "備註";
+  }
+
+  table.resultList tr td > div {
+    border-bottom: 1px dashed #ccc;
+    width: 100%;
+    padding: 1em;
   }
   .pageWrap {
     flex-direction: column;

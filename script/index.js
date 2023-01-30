@@ -65,4 +65,42 @@ $(document).ready(function () {
     })
   })
 
+  $aList.focus(function () {
+    event.preventDefault();
+
+    $aList.removeClass('active');
+    $(this).addClass('active');
+
+    tabContent.forEach((tab) => {
+      $(tab).removeClass('active');
+      $(`#${$(this).data("tab")}`).addClass('active');
+    })
+  })
+
+  $('.lists').off('keydown').on('keydown', function (event) {
+    event.preventDefault();
+    event = window.event || event;
+    if ((event.keyCode || event.which) == '9') {
+      if ($('#tab_first').is(':focus')) {
+        $('#first>a:first-child').focus();
+      } else if ($('#tab_second').is(':focus')) {
+        $('#second>a:first-child').focus();
+      } else {
+        $('#third>a:first-child').focus();
+      }
+    }
+  })
+
+  $('.more').off('keydown').on('keydown', function (event) {
+    if ($(this).closest('.tabContent').attr('id') !== 'third')
+      event.preventDefault();
+    event = window.event || event;
+    if ((event.keyCode || event.which) == '9') {
+      if ($('#first .more').is(':focus')) {
+        $('#tab_second').focus();
+      } else if ($('#second .more').is(':focus')) {
+        $('#tab_third').focus();
+      }
+    }
+  })
 })

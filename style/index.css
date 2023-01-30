@@ -55,13 +55,30 @@ a.carousel__link img {
 
 .carousel2 .slick-next:before,
 .carousel2 .slick-prev:before {
-  font-family: slick;
+  font-family: monospace;
   font-size: 30px;
   line-height: 1;
   opacity: 1;
-  color: var(--primary);
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before {
+  content: "<";
+}
+
+.slick-next:before {
+  content: ">";
+}
+
+.slick-dots li button:before {
+  font-size: 40px;
 }
 
 .carousel2 .slick-next,
@@ -203,6 +220,7 @@ button.slick-prev.slick-arrow:focus {
 .lastestNewWrap {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
 }
 
 .lastestNewWrap .lists {

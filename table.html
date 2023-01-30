@@ -7,13 +7,6 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
       name="viewport"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/table.css" />
     <title>TTQS 課程資訊</title>
@@ -24,7 +17,7 @@
     <div class="container">
       <div class="mainContent">
         <div class="topContent">
-          <div class="breadcrumb">
+          <div class="breadcrumb d_pc">
             <a
               accesskey="C"
               id="content"
@@ -38,7 +31,7 @@
           </div>
           <div class="linkArea">
             <a href="news.php" title="最新消息">
-              <img src="image/latest.png" alt="最新消息" />
+              <img src="image/latest_nav.png" alt="最新消息" />
               <div>最新消息</div>
             </a>
             <a href="menu_0011.php" title="會員專區">
@@ -62,21 +55,58 @@
               <div>資料下載</div>
             </a>
             <a href="menu_005_01.php" title="活動專區">
-              <img src="image/event.png" alt="活動專區" />
+              <img src="image/event_noBorder.png" alt="活動專區" />
               <div>活動專區</div>
             </a>
             <a href="menu_004_03.php" title="課程資訊">
-              <img src="image/lesson.png" alt="課程資訊" />
+              <img src="image/lesson_nav.png" alt="課程資訊" />
               <div>課程資訊</div>
             </a>
           </div>
         </div>
-        <div class="card">
+        <div class="card search">
           <h3 class="cardTitle">課程資訊查詢</h3>
           <table class="searchTable">
             <tbody>
               <tr>
-                <td>日期-起</td>
+                <td class="d_pc">日期區間：</td>
+                <td class="d_m d_table_cell head">日期-起：</td>
+                <td>
+                  <select name="from_year" id="from_year">
+                    <option label="2023" value="2023">2023</option>
+                    <option label="2024" value="2024">2024</option>
+                  </select>
+                  <span>年</span>
+                  <select name="from_month" id="from_month">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>月</span>
+                  <select name="from_day" id="from_day">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span>日</span>
+                  <span class="d_pc">~</span>
+                  <select class="d_pc" name="from_year" id="from_year">
+                    <option label="2023" value="2023">2023</option>
+                    <option label="2024" value="2024">2024</option>
+                  </select>
+                  <span class="d_pc">年</span>
+                  <select class="d_pc" name="from_month" id="from_month">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span class="d_pc">月</span>
+                  <select class="d_pc" name="from_day" id="from_day">
+                    <option label="1" value="1">1</option>
+                    <option label="2" value="2">2</option>
+                  </select>
+                  <span class="d_pc">日</span>
+                </td>
+              </tr>
+              <tr class="d_m d_table_row">
+                <td>日期-訖：</td>
                 <td>
                   <select name="from_year" id="from_year">
                     <option label="2023" value="2023">2023</option>
@@ -96,27 +126,7 @@
                 </td>
               </tr>
               <tr>
-                <td>日期-訖</td>
-                <td>
-                  <select name="from_year" id="from_year">
-                    <option label="2023" value="2023">2023</option>
-                    <option label="2024" value="2024">2024</option>
-                  </select>
-                  <span>年</span>
-                  <select name="from_month" id="from_month">
-                    <option label="1" value="1">1</option>
-                    <option label="2" value="2">2</option>
-                  </select>
-                  <span>月</span>
-                  <select name="from_day" id="from_day">
-                    <option label="1" value="1">1</option>
-                    <option label="2" value="2">2</option>
-                  </select>
-                  <span>日</span>
-                </td>
-              </tr>
-              <tr>
-                <td>課程名稱</td>
+                <td>課程名稱：</td>
                 <td>
                   <select class="normalSelect" name="" id="">
                     <option label="" value="">-- 所有課程 --</option>
@@ -124,7 +134,7 @@
                 </td>
               </tr>
               <tr>
-                <td>請選擇區別</td>
+                <td>請選擇區別：</td>
                 <td>
                   <select class="normalSelect" name="" id="">
                     <option label="" value="">-- 全部區別 --</option>
@@ -132,7 +142,7 @@
                 </td>
               </tr>
               <tr>
-                <td>報名狀態</td>
+                <td>報名狀態：</td>
                 <td>
                   <select class="normalSelect" name="" id="">
                     <option label="" value="">-- 全部 --</option>
@@ -146,6 +156,7 @@
             <button class="normalButton" type="button">資料查詢</button>
           </div>
         </div>
+        <hr />
         <div class="card">
           <h3 class="cardTitle">課程資訊列表</h3>
           <table class="resultList">
@@ -167,10 +178,16 @@
             </thead>
             <tbody>
               <tr>
-                <td>桃竹苗區</td>
-                <td>實務課程</td>
                 <td>
-                  <a href="">TTQS訓練機構版個案解析與實作研習</a>
+                  <div>桃竹苗區</div>
+                </td>
+                <td>
+                  <div>實務課程</div>
+                </td>
+                <td>
+                  <div>
+                    <a href="">TTQS訓練機構版個案解析與實作研習</a>
+                  </div>
                 </td>
                 <td>
                   <div>
@@ -186,8 +203,12 @@
                     <div>16:00</div>
                   </div>
                 </td>
-                <td>50</td>
-                <td>01/29</td>
+                <td>
+                  <div>50</div>
+                </td>
+                <td>
+                  <div>01/29</div>
+                </td>
                 <td>
                   <div>
                     <div class="remind">已額滿</div>
@@ -196,13 +217,15 @@
                     </div>
                   </div>
                 </td>
-                <td>(實務課程-可候補)</td>
+                <td>
+                  <div>(實務課程-可候補)</div>
+                </td>
               </tr>
               <tr>
-                <td>桃竹苗區</td>
-                <td>實務課程</td>
+                <td><div>桃竹苗區</div></td>
+                <td><div>實務課程</div></td>
                 <td>
-                  <a href="">TTQS訓練機構版個案解析與實作研習</a>
+                  <div><a href="">TTQS訓練機構版個案解析與實作研習</a></div>
                 </td>
                 <td>
                   <div>
@@ -218,8 +241,8 @@
                     <div>16:00</div>
                   </div>
                 </td>
-                <td>50</td>
-                <td>01/29</td>
+                <td><div>50</div></td>
+                <td><div>01/29</div></td>
                 <td>
                   <div>
                     <div class="remind">已額滿</div>
@@ -228,15 +251,17 @@
                     </div>
                   </div>
                 </td>
-                <td>(實務課程-可候補)</td>
+                <td>
+                  <div>(實務課程-可候補)</div>
+                </td>
               </tr>
             </tbody>
           </table>
           <div class="pageWrap">
             <div class="pageBtns">
               <button class="normalButton" type="button">首頁</button>
-              <button class="normalButton" type="button">前頁</button>
-              <button class="normalButton" type="button">次頁</button>
+              <button class="normalButton" type="button" disabled>前頁</button>
+              <button class="normalButton" type="button" disabled>次頁</button>
               <button class="normalButton" type="button">末頁</button>
             </div>
             <div class="pagination">
@@ -258,7 +283,7 @@
       </div>
     </div>
     <div id="footer"></div>
-    <script src="script/jquery-3.3.0.min.js"></script>
+    <script src="vendor/jquery-3.3.0.min.js"></script>
     <script src="script/main.js"></script>
   </body>
 </html>

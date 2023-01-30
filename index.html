@@ -7,27 +7,8 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"
       name="viewport"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="vendor/slick-theme.css" />
+    <link rel="stylesheet" href="vendor/slick.css" />
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/index.css" />
     <title>TTQS人才發展品質管理系統</title>
@@ -35,7 +16,7 @@
 
   <body>
     <div id="navbar"></div>
-    <div style="background: #e7f4f6">
+    <div style="background: #e5fff6">
       <div
         class="container bannerArea"
         style="background: #fefefe; border-bottom: 1px solid #efefef"
@@ -141,29 +122,28 @@
       </div>
     </div>
     <div class="container mainArea">
-      <a
-        style="margin-top: 25px; width: fit-content"
-        accesskey="C"
-        id="content"
-        href="#content"
-        title="主要內容區，此區塊呈現各網頁的網頁內容。"
-        >:::</a
-      >
       <div class="lastestNewWrap">
+        <a
+          accesskey="C"
+          id="content"
+          href="#content"
+          title="主要內容區，此區塊呈現各網頁的網頁內容。"
+          >:::</a
+        >
         <div class="lists">
-          <a href="#" class="active" data-tab="first">
+          <a href="#" class="active" id="tab_first" data-tab="first">
             <div class="title">
               <img src="image/latest.png" alt="最新消息" />
               <h2>最新消息</h2>
             </div>
           </a>
-          <a href="#" data-tab="second">
+          <a href="#" id="tab_second" data-tab="second">
             <div class="title">
               <img src="image/event.png" alt="活動專區" />
               <h2>活動專區</h2>
             </div>
           </a>
-          <a href="#" data-tab="third">
+          <a href="#" id="tab_third" data-tab="third">
             <div class="title">
               <img src="image/lesson.png" alt="課程資訊" />
               <h2>課程資訊</h2>
@@ -698,8 +678,8 @@
       </div>
     </div>
     <div id="footer"></div>
-    <script src="script/jquery-3.3.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script src="vendor/jquery-3.3.0.min.js"></script>
+    <script src="vendor/slick.min.js"></script>
     <script src="script/main.js"></script>
     <script src="script/index.js"></script>
   </body>
