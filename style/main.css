@@ -436,6 +436,7 @@ ul.topMenu li a:hover {
   padding: 12px 0;
   white-space: nowrap;
   background-color: var(--primary-lighter);
+  border: 1px solid var(--primary-lighter);
   transition: 0.2s ease-in-out;
 }
 
@@ -452,7 +453,7 @@ ul.topMenu li a:hover {
 .navList ul.menu li a:hover,
 .navList ul.menu li a:focus {
   background-color: var(--primary-darker);
-  color: #000;
+  color: #fff;
 }
 
 .navList ul.menu li ul.dropdown li:hover a,
