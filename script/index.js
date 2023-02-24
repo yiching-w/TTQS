@@ -91,7 +91,7 @@ $(document).ready(function () {
     }
   })
 
-  $('.more').off('keydown').on('keydown', function (event) {
+  $('.lastestNewWrap .more').off('keydown').on('keydown', function (event) {
     if ($(this).closest('.tabContent').attr('id') !== 'third')
       event.preventDefault();
     event = window.event || event;
